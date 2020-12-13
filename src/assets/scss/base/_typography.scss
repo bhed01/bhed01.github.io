@@ -1,0 +1,52 @@
+.heading {
+	letter-spacing: 0.05em;
+	font-size: 2em;
+	font-weight: 500;
+	margin: 0.25rem 0;
+	&--lg {
+		font-size: 2.45em;
+		font-weight: 600;
+		letter-spacing: 0.05em;
+	}
+	&--md {
+		font-size: 1.4em;
+		font-weight: 500;
+		letter-spacing: 0.05em;
+	}
+	&--sm {
+		font-size: 0.8em;
+	}
+}
+
+.txt {
+	&--center {
+		text-align: center;
+	}
+	&--dynamic {
+		font-size: clamp(1rem, 2vw, 1.3rem);
+	}
+	&--dynamic-lg {
+		font-size: clamp(1.3rem, 5vw, 2.5rem);
+	}
+}
+
+.note {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	font-size: 1rem;
+	margin: 1rem;
+	text-transform: uppercase;
+	@include mq($breakpoint-xs) {
+		margin: 2rem;
+	}
+}
+
+.link {
+	&--underlined {
+		color: #008fc7;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

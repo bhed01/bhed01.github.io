@@ -1,0 +1,19 @@
+{
+    "title": "Hi,",
+    "sub_title": "I'm Bhed,",
+    "sub_sub_title": "Welcome To My Portfolio",
+    "video": [
+        {
+            "src": "/assets/videos/bg.webm",
+            "type": "video/webm"
+        },
+        {
+            "src": "/assets/videos/bg.mp4",
+            "type": "video/mp4"
+        },
+        {
+            "src": "/assets/videos/bg.ogg",
+            "type": "video/ogg"
+        }
+    ]
+}

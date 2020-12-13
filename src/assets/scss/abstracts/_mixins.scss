@@ -1,0 +1,16 @@
+@mixin mq($break-point) {
+	@media screen and (min-width: $break-point) {
+		@content;
+	}
+}
+
+@mixin pos-abs($pesudo-selector, $content:"", $pos: true) {
+	@if $pos {
+		position: relative;
+	}
+	&::#{$pesudo-selector} {
+		content: $content;
+		position: absolute;
+		@content;
+	}
+}

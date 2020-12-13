@@ -1,0 +1,37 @@
+.content-section {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 3rem;
+	width: calc(100% - 6rem);
+	@include mq($breakpoint-xs) {
+		padding: 0 5rem;
+		width: calc(100% - 10rem);
+	}
+	@include mq(calc($breakpoint-lg + 5rem)) {
+		padding: 0;
+		width: 100%;
+	}
+}
+
+.pic-frame {
+	overflow: hidden;
+	height: 15rem;
+	width: 15rem;
+	border-radius: 50%;
+	box-shadow: var(--shadow-lg);
+	transition: 0.3s opacity;
+	flex-shrink: 0;
+	img {
+		width: 100%;
+		object-fit: cover;
+	}
+}
+
+.flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#project-title {
+	opacity: 0;
+}

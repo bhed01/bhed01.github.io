@@ -1,0 +1,19 @@
+.bio {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	&__content {
+		flex: 1;
+		margin: 2em 0;
+	}
+	&__text {
+		line-height: 1.5;
+	}
+	@include mq($breakpoint-sm) {
+		flex-direction: row-reverse;
+		align-items: center;
+		&__content {
+			margin-right: 2em;
+		}
+	}
+}

@@ -1,0 +1,88 @@
+.card {
+	background-color: var(--bg-clr);
+	box-shadow: var(--shadow);
+	border-radius: 1rem;
+	display: grid;
+	color: inherit;
+	overflow: hidden;
+	position: relative;
+	&--project {
+		transition: 0.3s;
+		transition-property: transform;
+		&:hover {
+			transform: scale(1.1);
+			.card__heading {
+				opacity: 0;
+			}
+			.card__img {
+				opacity: 1;
+			}
+		}
+	}
+	&__heading {
+		text-shadow: var(--shadow);
+		position: absolute;
+		text-align: center;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 1rem;
+		transition: 0.3s opacity;
+		@include mq($breakpoint-xs) {
+			&--project {
+				padding: 2rem;
+			}
+		}
+	}
+	&__img {
+		object-fit: contain;
+		width: 100%;
+		opacity: 0.6;
+		transition: 0.3s opacity;
+	}
+	&--skill {
+		grid-template-columns: 3rem 1fr;
+		padding: 0.5rem;
+		column-gap: 0.5rem;
+		&__icon {
+			font-size: 3rem;
+			grid-row: span 2;
+			border-radius: 0.5rem;
+			overflow: hidden;
+		}
+		&__bar {
+			background-color: #fff5;
+			height: 6px;
+			border-radius: 3px;
+			&::after {
+				content: "";
+				background-image: linear-gradient(to right, var(--secondary-clr, #ffffff), var(--primary-clr, #0069d3));
+				width: var(--level);
+				height: 6px;
+				border-radius: 3px;
+				display: block;
+			}
+		}
+		&__heading {
+			letter-spacing: 0.1rem;
+			font-weight: normal;
+			align-self: center;
+			font-size: 1rem;
+			display: flex;
+			justify-content: space-between;
+			&::after {
+				content: attr(data-width);
+				font-size: 0.8rem;
+				font-weight: 700;
+			}
+		}
+	}
+}
+
+.slide-in .card--skill__bar::after {
+	animation: grow-along-x 1s ease-in-out;
+}

@@ -1,0 +1,58 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--bg-clr: #222327;
+	--font-clr: #fff;
+	--font-muted: #bbb;
+	--shadow: 0 0 1rem #0006;
+	--shadow-lg: 0 0 4rem #0006;
+	--scrollbar-clr: #fff5;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+html {
+	scroll-behavior: smooth;
+	scrollbar-width: thin;
+	scrollbar-color: var(--scrollbar-clr) transparent;
+	&::-webkit-scrollbar {
+		width: 6px;
+		&-thumb {
+			background-color: var(--scrollbar-clr);
+		}
+	}
+}
+
+body {
+	color: var(--font-clr);
+	background-color: var(--bg-clr);
+	font-family: 'Montserrat', sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	font-weight: 500;
+}
+
+svg {
+	display: block;
+}
+
+ul {
+	list-style: circle;
+	list-style-position: inside;
+}
+li {
+	margin-bottom: 0.3em;
+}
+
+strong {
+	font-weight: 500;
+}

@@ -1,0 +1,22 @@
+.grid {
+	display: grid;
+	margin: 1rem 0;
+	grid-template-columns: 1fr;
+	&__heading {
+		grid-column: 1 / -1;
+	}
+	&--skills {
+		row-gap: 1rem;
+		column-gap: 1rem;
+		@include mq($breakpoint-xs) {
+			grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+		}
+	}
+	&--projects {
+		row-gap: 2rem;
+		column-gap: 2rem;
+		@include mq($breakpoint-xs) {
+			grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+		}
+	}
+}

@@ -1,0 +1,8 @@
+__pycache__/
+env/
+venv/
+build/
+node_modules/
+yarn.lock
+*.log
+.vscode/

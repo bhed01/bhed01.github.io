@@ -1,0 +1,26 @@
+.footer {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	background-color: var(--bg-clr);
+	background-image: url(/assets/images/footer-bg.png);
+	background-size: cover;
+	color: var(--font-clr);
+	position: relative;
+	&__heading {
+		text-transform: uppercase;
+		font-size: 1.6rem;
+		&--sm {
+			font-size: 1rem;
+			font-weight: 600;
+			color: var(--font-muted);
+		}
+	}
+	&__text {
+		color: var(--font-muted);
+		font-size: 5vw;
+		margin-bottom: 2rem;
+		@include mq($breakpoint-sm) {
+			font-size: 2.5rem;
+		}
+	}
+}
