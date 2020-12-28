@@ -72,13 +72,6 @@
 			font-weight: normal;
 			align-self: center;
 			font-size: 1rem;
-			display: flex;
-			justify-content: space-between;
-			&::after {
-				content: attr(data-width);
-				font-size: 0.8rem;
-				font-weight: 700;
-			}
 		}
 	}
 }

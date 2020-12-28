@@ -8,7 +8,7 @@ def Skill(data):
         <div class="card--skill__icon">
             {icons[data['icon']]}
         </div>
-        <h3 class="card--skill__heading" data-width="90%">
+        <h3 class="card--skill__heading">
             {data['name']}
         </h3>
         <div class="card--skill__bar"></div>
