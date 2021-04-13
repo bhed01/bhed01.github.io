@@ -4,10 +4,13 @@
   "version": "1.0.0",
   "description": "My Portfolio",
   "scripts": { 
-    "start": "python3 run.py dev",
-    "predeploy": "npm run build",
+    "start": "npm run dev & npm run watchsass",
+    "dev": "python3 run.py dev",
+    "predeploy": "npm run compilesass & npm run build",
     "deploy": "gh-pages -d build",
-    "build": "python3 run.py build"
+    "build": "python3 run.py build",
+    "compilesass": "sass ./src/assets/scss/style.scss ./build/assets/css/style.min.css --no-source-map --style=compressed",
+    "watchsass": "sass ./src/assets/scss/style.scss ./build/assests/css/style.min.css --watch"
    },
   "repository": "https://github.com/bhed01/bhed01.github.io.git",
   "author": "Bhed Kumar Kushwaha <kushwaha.ved@gmail.com>",
