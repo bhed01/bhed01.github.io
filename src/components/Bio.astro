@@ -1,0 +1,18 @@
+---
+export interface BioProps {
+  about: string;
+  profile_pic: string;
+};
+
+const { about, profile_pic } = Astro.props as BioProps;
+---
+
+<div id="bio" class="bio">
+  <div class="pic-frame animate" data-animation="slide-in">
+    <img src={profile_pic}>
+  </div>
+  <div class="bio__content txt--dynamic animate" data-animation="zoom-in">
+    <h2 class="heading screen__heading" data-heading="01">About Me</h2>
+    <div class="bio__text" set:html={about} />
+  </div>
+</div>

@@ -1,0 +1,23 @@
+---
+interface Props {
+  title: string;
+  sub_title: string;
+  video_sources: { src: string; type: string; }[];
+  sub_sub_title: string;
+};
+
+const { title, sub_title, video_sources, sub_sub_title } = Astro.props as Props;
+---
+
+<div id="home" class="screen txt--dynamic-lg">
+  <video id="bg-video" class="screen__bg" muted loop playsinline autoplay>
+    {video_sources.map(src =>
+    <source {...src} />)}
+  </video>
+  <div class="screen__content screen__content--fxd zoom-in">
+    <h1 class="heading--lg">{title}</h1>
+    <h2 class="heading--md">{sub_title}</h2>
+    <p class="heading--sm">{sub_sub_title}</p>
+  </div>
+  <a href="#about" class="note">Kindly scroll down</a>
+</div>

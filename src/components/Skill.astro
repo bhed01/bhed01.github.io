@@ -1,0 +1,20 @@
+---
+export interface SkillProps {
+  style: object;
+  icon: string;
+  name: string;
+}
+
+const { style, icon, name } = Astro.props as SkillProps;
+---
+
+<div class="card card--skill animate" data-animation="slide-in" style={Object.entries(style).map(([key,val])=>
+  `${key}:${val}`).join(';')}>
+  <div class="card--skill__icon">
+    <Fragment set:html={icon} />
+  </div>
+  <h3 class="card--skill__heading">
+    {name}
+  </h3>
+  <div class="card--skill__bar"></div>
+</div>

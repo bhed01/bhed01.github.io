@@ -1,0 +1,42 @@
+---
+interface Props {
+  video: string;
+  about_project: string[];
+  technologies: { icon: string, label: string }[];
+  resources: string[];
+};
+
+const { video, about_project, technologies, resources } = Astro.props as Props;
+---
+
+<div id="about-project" class="screen--proj-desc txt--dynamic">
+  <div class="content-section">
+    <div class="screen__block">
+      <h1 class="heading screen__heading" data-heading="01">About Project</h1>
+      <div class="screen__block">
+        {about_project.map((text) => <p class="animate" data-animation="slide-in">{text}</p>)}
+        <video class="screen__block__video animate" data-animation="slide-in-right" src={video} muted loop playsinline
+          controls></video>
+      </div>
+    </div>
+    <div class="screen__block">
+      <h1 class="heading screen__heading" data-heading="02">
+        Technologies Used
+      </h1>
+      <div class="flex">
+        {technologies.map(({icon, label}) =>
+        <div class="icon--with-label">
+          <Fragment set:html={icon} />
+          <p>{label}</p>
+        </div>)}
+      </div>
+    </div>
+    <div class="screen__block">
+      <h1 class="heading screen__heading" data-heading="03">Resources</h1>
+      <ul>
+        {resources.map(html =>
+        <li set:html={html} />)}
+      </ul>
+    </div>
+  </div>
+</div>

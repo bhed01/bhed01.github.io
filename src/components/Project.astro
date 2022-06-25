@@ -1,0 +1,16 @@
+---
+export interface ProjectProps {
+  name: string;
+  bg_url: string;
+  link: string;
+};
+
+const { name, bg_url, link } = Astro.props as ProjectProps;
+---
+
+<div class="project">
+  <a class="card card--project animate" data-animation="move-up-scale" href={link}>
+    <img class="card__img" src={bg_url}>
+    <h2 class="heading card__heading">{name}</h2>
+  </a>
+</div>

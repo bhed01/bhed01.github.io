@@ -1,0 +1,103 @@
+{
+	"bio": {
+		"profile_pic": "/assets/images/profile-pic.webp",
+		"about": "<p>My name is <strong>Bhed Kumar Kushwaha</strong>, Software Engineer at Darwinbox. My interests include <strong>Full Stack Web Development</strong>, <strong>Data Science</strong> and <strong>Machine Learning</strong>.</p><p>I have diverse set of skills, ranging from design, to HTML + CSS + JavaScript, all the way to Python, Django, Go.</p>"
+	},
+	"skills": [
+		{
+			"style": {
+				"--level": "90%",
+				"--primary-clr": "#FF5722",
+				"--secondary-clr": "#29f"
+			},
+			"icon": "html-css",
+			"name": "HTML/CSS"
+		},
+		{
+			"style": {
+				"--level": "90%",
+				"--primary-clr": "#f0db4f",
+				"--secondary-clr": "#323330"
+			},
+			"icon": "js",
+			"name": "JavaScript"
+		},
+		{
+			"style": {
+				"--level": "90%",
+				"--primary-clr": "#FFE052",
+				"--secondary-clr": "#366994"
+			},
+			"icon": "python",
+			"name": "Python"
+		},
+		{
+			"style": {
+				"--level": "80%",
+				"--primary-clr": "#2BA977"
+			},
+			"icon": "django",
+			"name": "Django"
+		},
+		{
+			"style": {
+				"--level": "70%",
+				"--primary-clr": "#CF649A"
+			},
+			"icon": "sass",
+			"name": "SASS"
+		},
+		{
+			"style": {
+				"--level": "70%",
+				"--primary-clr": "#61dafb"
+			},
+			"icon": "react",
+			"name": "React/React-Native"
+		},
+		{
+			"style": {
+				"--level": "70%",
+				"--primary-clr": "#007acc",
+				"--secondary-clr": "#323330"
+			},
+			"icon": "ts",
+			"name": "TypeScript"
+		},
+		{
+			"style": {
+				"--level": "70%",
+				"--primary-clr": "#1B598E"
+			},
+			"icon": "cpp",
+			"name": "C++"
+		},
+		{
+			"style": {
+				"--level": "70%",
+				"--primary-clr": "#001E36",
+				"--secondary-clr": "#31A8FF;"
+			},
+			"icon": "photoshop",
+			"name": "Photoshop"
+		},
+		{
+			"style": {
+				"--level": "70%",
+				"--primary-clr": "#330000",
+				"--secondary-clr": "#FF9A00;"
+			},
+			"icon": "illustrator",
+			"name": "Illustrator"
+		},
+		{
+			"style": {
+				"--level": "60%",
+				"--primary-clr": "#ffca00",
+				"--secondary-clr": "#e70488"
+			},
+			"icon": "pandas",
+			"name": "Pandas"
+		}
+	]
+}

@@ -1,0 +1,18 @@
+---
+import Project, { ProjectProps } from "../Project.astro";
+
+interface Props {
+  projects: ProjectProps[];
+};
+
+const { projects } = Astro.props as Props;
+---
+
+<div id="projects" class="screen">
+  <div class="content-section">
+    <div class="screen__content grid grid--projects">
+      {projects.map(project =>
+      <Project {...project} />)}
+    </div>
+  </div>
+</div>

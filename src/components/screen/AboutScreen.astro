@@ -1,0 +1,23 @@
+---
+import Bio, { BioProps } from "../Bio.astro";
+import Skill, { SkillProps } from "../Skill.astro";
+
+interface Props {
+  bio: BioProps;
+  skills: SkillProps[];
+};
+
+const { bio, skills } = Astro.props as Props;
+---
+
+<div id="about" class="screen screen--about">
+  <div class="content-section">
+    <Bio {...bio} />
+    <div class="grid grid--skills">
+      <h2 class="heading grid__heading screen__heading" data-heading="02">Skill Set</h2>
+      {skills.map(skill =>
+      <Skill {...skill} />)}
+    </div>
+  </div>
+  <a href="#projects" class="note">Kindly scroll down</a>
+</div>

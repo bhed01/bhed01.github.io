@@ -1,0 +1,18 @@
+---
+interface Props {
+  bg_url: string;
+  title: string;
+  sub_title: string;
+}
+
+const { bg_url, title, sub_title } = Astro.props as Props;
+---
+
+<div class="screen txt--dynamic">
+  <img src={bg_url} class="screen__bg">
+  <div class="screen__content screen__content--fxd move-up-scale">
+    <h2 class="heading--lg txt--center">{title}</h2>
+    <p class="txt--center">{sub_title}</p>
+  </div>
+  <a href="#about-project" class="note">Kindly scroll down</a>
+</div>

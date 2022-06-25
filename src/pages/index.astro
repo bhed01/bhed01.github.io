@@ -1,0 +1,25 @@
+---
+import Hamburger from "../components/Hamburger.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HomeScreen from "../components/screen/HomeScreen.astro";
+import AboutScreen from "../components/screen/AboutScreen.astro";
+import ProjectsScreen from "../components/screen/ProjectsScreen.astro";
+import Footer from "../components/Footer.astro";
+
+import home_data from '../json/home_data.json';
+import about_data from '../json/about_data.json';
+import { projects } from '../json/projects_data.json';
+import footer_data from '../json/footer_data.json';
+import icons_data from '../json/icons_data.json';
+
+let { bio, skills } = about_data;
+skills = skills.map(({ icon, ...rest }) => ({ ...rest, icon: icons_data[icon] }));
+---
+
+<BaseLayout title="Portfolio - Bhed">
+	<Hamburger />
+	<HomeScreen {...home_data} />
+	<AboutScreen bio={bio} skills={skills} />
+	<ProjectsScreen projects={projects} />
+	<Footer {...footer_data} />
+</BaseLayout>

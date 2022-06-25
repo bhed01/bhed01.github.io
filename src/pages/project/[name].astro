@@ -1,0 +1,27 @@
+---
+import Footer from "../../components/Footer.astro";
+import ProjectHomeScreen from "../../components/screen/ProjectHomeScreen.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectScreen from "../../components/screen/ProjectScreen.astro";
+
+import footer_data from "../../json/footer_data.json";
+import { details } from "../../json/projects_data.json";
+import icons_data from "../../json/icons_data.json";
+
+const { name } = Astro.params;
+
+const project_detail = details.find(({ title }) => title.toLowerCase().split(' ').join('-') === name);
+project_detail.technologies = project_detail.technologies.map(({ icon, ...rest }) => ({ ...rest, icon: icons_data[icon] }));
+
+export function getStaticPaths() {
+  return details.map(({ title }) => ({ params: { name: title.toLowerCase().split(' ').join('-') } }));
+}
+
+---
+
+<BaseLayout title={`Portfolio - ${project_detail.title}`}>
+  <div onclick="window.history.back()" class="icon--nav icon--back"></div>
+  <ProjectHomeScreen {...project_detail} />
+  <ProjectScreen {...project_detail} />
+  <Footer {...footer_data} />
+</BaseLayout>
