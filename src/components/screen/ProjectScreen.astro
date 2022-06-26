@@ -14,7 +14,8 @@ const { video, about_project, technologies, resources } = Astro.props as Props;
     <div class="screen__block">
       <h1 class="heading screen__heading" data-heading="01">About Project</h1>
       <div class="screen__block">
-        {about_project.map((text) => <p class="animate" data-animation="slide-in">{text}</p>)}
+        {about_project.map((text) =>
+        <p class="animate" data-animation="slide-in" set:html={text} />)}
         <video class="screen__block__video animate" data-animation="slide-in-right" src={video} muted loop playsinline
           controls></video>
       </div>

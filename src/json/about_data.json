@@ -34,6 +34,32 @@
 		{
 			"style": {
 				"--level": "80%",
+				"--primary-clr": "#61dafb"
+			},
+			"icon": "react",
+			"name": "React/React-Native"
+		},
+		{
+			"style": {
+				"--level": "80%",
+				"--primary-clr": "#007acc",
+				"--secondary-clr": "#323330"
+			},
+			"icon": "ts",
+			"name": "TypeScript"
+		},
+		{
+			"style": {
+				"--level": "80%",
+				"--primary-clr": "#4caf50",
+				"--secondary-clr": "#5d4037"
+			},
+			"icon": "mongodb",
+			"name": "MongoDB"
+		},
+		{
+			"style": {
+				"--level": "70%",
 				"--primary-clr": "#2BA977"
 			},
 			"icon": "django",
@@ -50,23 +76,6 @@
 		{
 			"style": {
 				"--level": "70%",
-				"--primary-clr": "#61dafb"
-			},
-			"icon": "react",
-			"name": "React/React-Native"
-		},
-		{
-			"style": {
-				"--level": "70%",
-				"--primary-clr": "#007acc",
-				"--secondary-clr": "#323330"
-			},
-			"icon": "ts",
-			"name": "TypeScript"
-		},
-		{
-			"style": {
-				"--level": "70%",
 				"--primary-clr": "#1B598E"
 			},
 			"icon": "cpp",
@@ -75,29 +84,27 @@
 		{
 			"style": {
 				"--level": "70%",
-				"--primary-clr": "#001E36",
-				"--secondary-clr": "#31A8FF;"
+				"--primary-clr":"#444445"
 			},
-			"icon": "photoshop",
-			"name": "Photoshop"
+			"icon": "bash",
+			"name": "Bash"
 		},
 		{
 			"style": {
 				"--level": "70%",
-				"--primary-clr": "#330000",
-				"--secondary-clr": "#FF9A00;"
+				"--primary-clr": "#dcd5f2"
 			},
-			"icon": "illustrator",
-			"name": "Illustrator"
+			"icon": "php",
+			"name": "PHP"
 		},
 		{
 			"style": {
 				"--level": "60%",
-				"--primary-clr": "#ffca00",
-				"--secondary-clr": "#e70488"
+				"--primary-clr": "#4dd0e1",
+				"--secondary-clr": "#ffcc80"
 			},
-			"icon": "pandas",
-			"name": "Pandas"
+			"icon": "go",
+			"name": "Go"
 		}
 	]
 }

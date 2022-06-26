@@ -153,7 +153,7 @@
             "bg_url": "/assets/images/my-portfolio.webp",
             "video": "/assets/videos/my-portfolio.mp4",
             "about_project": [
-                "It is a static site that is generated through Python script. Python script reads data stored in json format and generates appropriate HTML from it. The script also uses the watchdog library to view <em>src</em> director's files for any changes, whenever a file is modified it copies all assets to the <em>build</em> directory and creates new HTML files."
+                "It is a static site build using Astro. It uses data stored in json files to generate the pages."
             ],
             "technologies": [
                 {
@@ -165,8 +165,8 @@
                     "label": "SCSS"
                 },
                 {
-                    "icon": "python",
-                    "label": "Python"
+                    "icon": "astro",
+                    "label": "Astro"
                 },
                 {
                     "icon": "js",
